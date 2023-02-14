@@ -5,7 +5,7 @@ import numpy as np
 
 def main(picturePath, width, height, simple):
     try:
-        image = Image.open(picturePath)
+        image = Image.open(picturePath).convert("RGB")
     except Exception as e:
         print("error:" + e +
               "\nCould not open the picture, is the file a image filetype?")
